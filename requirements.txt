@@ -1,0 +1,23 @@
+# === 原有依赖 (严格保留) ===
+ccxt>=4.0.0
+pandas>=1.5.0
+ta>=0.10.2  # 用ta替代pandas-ta
+python-dotenv>=1.0.0
+aiohttp>=3.8.0
+apscheduler>=3.10.0
+numpy>=1.24.0
+termcolor>=2.3.0
+fastapi>=0.100.0
+uvicorn>=0.22.0
+jinja2>=3.1.0
+python-multipart>=0.0.6
+
+# === 核心追加依赖 (支撑系统刚升级的架构) ===
+# 用于 data_engine.py 中的底层 REST API 请求降级方案
+requests>=2.31.0
+
+# 用于 data_engine.py 中的全市场毫秒级实时行情监听
+websocket-client>=1.6.1
+
+# 用于 database/models.py 中的本地 SQLite 虚拟持仓/历史记录存储
+SQLAlchemy>=2.0.19
